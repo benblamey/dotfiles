@@ -2,9 +2,9 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Ho
 
 source ~/.profile
 
-alias git=hub
+#todo: remove
+#alias git=hub
 
-# Aliases from David
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -21,20 +21,24 @@ alias opencoverage='open coverage/lcov-report/index.html'
 #alias reinstall_node_modules="rm -rf node_modules && npm i && npm i && npm i"
 
 
-# My aliases
 # Checkout master, fetch everything, cleanup merged branches
 alias gittidy='git fetch --prune && git checkout master && git pull && git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d && git branch --list && git status'
+
 alias rmd='pbpaste | reformat-markdown-table | pbcopy'
 alias rmorig='find . -name *.orig -delete'
+
 alias gitlog='git log --graph --all --decorate --pretty=oneline -n 8 | cat'
 alias gs='git status'
 alias gt='gittidy'
 alias gp='git push -u origin HEAD'
+alias gaa='git add --all'
+alias gss='git stash save'
+alias gsp='git stash pop'
+alias g='git'
 
 alias fca='git add --all && echo ":wq" | git commit --amend'
 
 source ~/git-completion.bash
-
 
 alias upd-npm-deps="npm outdated --long | grep dependencies | cut -d ' ' -f 1 | xargs -L1 -I pkgname sh -c 'npm remove --save pkgname ; npm install --save pkgname'"
 alias upd-npm-deps-dev="npm outdated --long | grep devDependencies | cut -d ' ' -f 1 | xargs -L1 -I pkgname sh -c 'npm remove --save-dev pkgname ; npm install --save-dev pkgname'"
