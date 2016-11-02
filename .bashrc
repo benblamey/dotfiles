@@ -2,8 +2,6 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Ho
 
 source ~/.profile
 
-#todo: remove
-#alias git=hub
 
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -17,9 +15,6 @@ alias lint-errors='npm run lint -- --quiet'
 alias lint-fix='npm run lint -- --fix'
 
 alias opencoverage='open coverage/lcov-report/index.html'
-
-#alias reinstall_node_modules="rm -rf node_modules && npm i && npm i && npm i"
-
 
 # Checkout master, fetch everything, cleanup merged branches
 alias gittidy='git fetch --prune && git checkout master && git pull && git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d && git branch --list && git status'
