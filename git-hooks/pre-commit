@@ -1,0 +1,6 @@
+branch=`git symbolic-ref HEAD`
+
+if [ "$branch" = "refs/heads/master" ]; then
+    echo "Direct commits to master are not allowed, use -n to override"
+    exit 1
+fi

@@ -24,14 +24,14 @@ alias rmorig='find . -name *.orig -delete'
 
 alias gitlog='git log --graph --all --decorate --pretty=oneline -n 8 | cat'
 alias gs='git status'
-alias gt='gittidy'
+alias gt='gss && gittidy && gsp'
 alias gp='git push -u origin HEAD'
 alias gaa='git add --all ; gs'
 alias gss='git stash save'
 alias gsp='git stash pop ; gs'
 alias g='git'
 
-alias fca='gs && git add --all && echo ":wq" | git commit --amend'
+#alias fca='gs && git add --all && echo ":wq" | git commit --amend'
 alias gcamend='gs && echo ":wq" | git commit --amend && gs'
 
 
