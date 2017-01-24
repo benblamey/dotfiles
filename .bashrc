@@ -17,7 +17,8 @@ alias lint-fix='npm run lint -- --fix'
 alias opencoverage='open coverage/lcov-report/index.html'
 
 # Checkout master, fetch everything, cleanup merged branches
-alias gittidy='git fetch --prune && git checkout master && git pull && git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d && git branch --list && git status'
+# (note that checkout may fail - so we *attempt* to checkout master, then pull the current branch.)
+alias gittidy='git fetch --prune && git checkout master && git pull origin $(git rev-parse --abbrev-ref HEAD) && git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d && git branch --list && git status'
 
 alias rmd='pbpaste | reformat-markdown-table | pbcopy'
 alias rmorig='find . -name *.orig -delete'
@@ -30,6 +31,9 @@ alias gaa='git add --all ; gs'
 alias gss='git stash save'
 alias gsp='git stash pop ; gs'
 alias g='git'
+alias gc='git commit'
+alias gdy='git difftool -y'
+alias gmy='git mergetool -y'
 
 #alias fca='gs && git add --all && echo ":wq" | git commit --amend'
 alias gcamend='gs && echo ":wq" | git commit --amend && gs'
