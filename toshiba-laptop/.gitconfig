@@ -1,0 +1,36 @@
+[user]
+	name = Ben Blamey
+	email = blamey.ben@gmail.com
+[core]
+	editor = "'C:/PROGRA~2/notepad++/notepad++.exe' -multiInst -nosession -noPlugin $1"
+	filemode = false
+[merge]
+	tool = diffmerge
+
+[diff]
+    tool = diffmerge
+
+[difftool]
+	prompt = false
+	
+[difftool "diffmerge"]
+    cmd = "C:/PROGRA~1/SourceGear/Common/DiffMerge/sgdm.exe \"$LOCAL\" \"$REMOTE\""
+
+[diff "sqlite"]
+	textconv = "C:/work/docs/simpleapps/sqldump.bat"
+	cacheconvtext = true
+	tool = sqlitediff
+	
+[difftool "sqlitediff"]
+	cmd = "C:/work/docs/simpleapps/sqlitediff.sh \"$LOCAL\" \"$REMOTE\""
+
+[merge]
+    tool = diffmerge
+[mergetool "diffmerge"]
+    cmd = "C:/PROGRA~1/SourceGear/Common/DiffMerge/sgdm.exe --merge --result=$MERGED $LOCAL $BASE $REMOTE" 
+    trustExitCode = false
+    keepBackup = false
+	prompt = false
+
+[push]
+	default = matching
