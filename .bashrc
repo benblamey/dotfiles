@@ -2,6 +2,7 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Ho
 
 source ~/.profile
 
+PATH=$PATH:~/android-sdk/platform-tools
 
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -34,6 +35,8 @@ alias g='git'
 alias gc='git commit'
 alias gdy='git difftool -y'
 alias gmy='git mergetool -y'
+alias grc='git rebase --contunue'
+alias gmty='git mergetool -y'
 
 #alias fca='gs && git add --all && echo ":wq" | git commit --amend'
 alias gcamend='gs && echo ":wq" | git commit --amend && gs'
