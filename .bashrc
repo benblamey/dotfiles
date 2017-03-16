@@ -1,5 +1,9 @@
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home"
 
+# gradle needs to see the old JDK.
+export JAVA7_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
+
+
 source ~/.profile
 
 PATH=$PATH:~/android-sdk/platform-tools
