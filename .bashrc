@@ -42,6 +42,8 @@ alias gmy='git mergetool -y'
 alias grc='git rebase --contunue'
 alias gmty='git mergetool -y'
 
+alias gdt='gradle downloadTranslations'
+
 #alias fca='gs && git add --all && echo ":wq" | git commit --amend'
 alias gcamend='gs && echo ":wq" | git commit --amend && gs'
 
