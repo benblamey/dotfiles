@@ -76,4 +76,4 @@ export SDKMAN_DIR="/Users/benblamey/.sdkman"
 
 
 # if starting shell inside git dir (e.g. IntelliJ), pull and prune
-gittidy
+#gittidy
