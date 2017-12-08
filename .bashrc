@@ -1,12 +1,12 @@
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home"
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home"
 
 # gradle needs to see the old JDK.
-export JAVA7_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
+#export JAVA7_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
 
 
 source ~/.profile
 
-PATH=$PATH:~/android-sdk/platform-tools
+#PATH=$PATH:~/android-sdk/platform-tools
 
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -54,8 +54,8 @@ alias upd-npm-deps="npm outdated --long | grep dependencies | cut -d ' ' -f 1 | 
 alias upd-npm-deps-dev="npm outdated --long | grep devDependencies | cut -d ' ' -f 1 | xargs -L1 -I pkgname sh -c 'npm remove --save-dev pkgname ; npm install --save-dev pkgname'"
 alias upd-npm-deps-all="upd-npm-deps; upd-npm-deps-dev"
 
-export NVM_DIR="/Users/benblamey/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="/Users/benblamey/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -68,11 +68,11 @@ export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 
 #cd ~/projects
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/benblamey/.sdkman"
-[[ -s "/Users/benblamey/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/benblamey/.sdkman/bin/sdkman-init.sh"
+#export SDKMAN_DIR="/Users/benblamey/.sdkman"
+#[[ -s "/Users/benblamey/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/benblamey/.sdkman/bin/sdkman-init.sh"
 
 
 # if starting shell inside git dir (e.g. IntelliJ), pull and prune
