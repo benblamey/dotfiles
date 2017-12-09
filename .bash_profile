@@ -12,3 +12,6 @@ fi
 
 source ~/.profile
 #source ~/.m2h_chef_config
+
+# Add HomeBrew to path
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
