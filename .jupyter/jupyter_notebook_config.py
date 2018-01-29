@@ -647,6 +647,21 @@
 #  representing the file - contents_manager: this ContentsManager instance
 #c.FileContentsManager.post_save_hook = None
 
+# Also save .py file with notebook
+# https://stackoverflow.com/questions/18734739/using-ipython-notebooks-under-version-control
+import os
+from subprocess import check_call
+
+def post_save(model, os_path, contents_manager):
+    """post-save hook for converting notebooks to .py scripts"""
+    if model['type'] != 'notebook':
+        return # only do this for notebooks
+    d, fname = os.path.split(os_path)
+    check_call(['ipython', 'nbconvert', '--to', 'script', fname], cwd=d)
+
+c.FileContentsManager.post_save_hook = post_save
+
+
 ## 
 #c.FileContentsManager.root_dir = ''
 
