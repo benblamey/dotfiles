@@ -41,6 +41,8 @@ alias gdy='git difftool -y'
 alias gmy='git mergetool -y'
 alias grc='git rebase --contunue'
 alias gmty='git mergetool -y'
+alias gk='git checkout'
+alias gkm='git checkout master'
 
 alias gdt='gradle downloadTranslations'
 
@@ -62,6 +64,9 @@ parse_git_branch() {
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+
+alias dka='docker kill $(docker ps -q)'
+alias dla='docker logs $(docker ps -q)'
 
 #alias gitrebaseandforcepush="git pull --rebase origin master && git push -f origin `git rev-parse --abbrev-ref HEAD`"
 
