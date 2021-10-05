@@ -1,0 +1,8 @@
+{
+  "NotebookApp": {
+    "nbserver_extensions": {
+      "my_module": true,
+      "ben_jupyter_rest": false
+    }
+  }
+}

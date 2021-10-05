@@ -50,7 +50,7 @@ alias gdt='gradle downloadTranslations'
 alias gcamend='gs && echo ":wq" | git commit --amend && gs'
 
 
-source ~/git-completion.bash
+source ~/git-completion.zsh
 
 alias upd-npm-deps="npm outdated --long | grep dependencies | cut -d ' ' -f 1 | xargs -L1 -I pkgname sh -c 'npm remove --save pkgname ; npm install --save pkgname'"
 alias upd-npm-deps-dev="npm outdated --long | grep devDependencies | cut -d ' ' -f 1 | xargs -L1 -I pkgname sh -c 'npm remove --save-dev pkgname ; npm install --save-dev pkgname'"
@@ -68,6 +68,11 @@ export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 alias dka='docker kill $(docker ps -q)'
 alias dla='docker logs $(docker ps -q)'
 
+
+export PYSPARK_DRIVER_PYTHON='python3'
+export PYSPARK_PYTHON='python3'
+
+
 #alias gitrebaseandforcepush="git pull --rebase origin master && git push -f origin `git rev-parse --abbrev-ref HEAD`"
 
 
@@ -82,3 +87,6 @@ alias dla='docker logs $(docker ps -q)'
 
 # if starting shell inside git dir (e.g. IntelliJ), pull and prune
 #gittidy
+
+# added by travis gem
+[ -f /Users/benblamey/.travis/travis.sh ] && source /Users/benblamey/.travis/travis.sh
